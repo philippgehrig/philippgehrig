@@ -3,7 +3,7 @@
 
 
 
-- 🔭 I’m currently working at [Mercedes Benz in Sindelfinden](https://mercedes-benz.com)
+- 🔭 I’m currently working at [Mercedes Benz in Sindelfingen](https://mercedes-benz.com)
 
 - 🏎️ I'm a member of my universities Formula Student Team [DHBW Engineering](https://dhbw-enginnering.de)
 
