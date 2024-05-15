@@ -7,7 +7,7 @@
 
 - 🏎️ I'm a member of my universities Formula Student Team [DHBW Engineering](https://dhbw-enginnering.de)
 
-- 🤝 I’m currently studying Computer Sience [DHBW Stuttgart](https://dhbw-stuttgart.de)
+- 🤝 I’m currently studying Computer Science [DHBW Stuttgart](https://dhbw-stuttgart.de)
 
 - 📫 How to reach me **philipp@gehrig.info**
 
