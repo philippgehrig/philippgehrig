@@ -24,6 +24,15 @@ This script will install the following programs:
 - Enpass
 - GCC
 
+### Linux specific Programs
+
+### Windows specific Programs
+
+- PuTTy
+- WinSCP
+
+### MacOS specific Programs
+
 ## Installation
 
 First you need to make the script executable using:
