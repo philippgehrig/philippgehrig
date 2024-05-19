@@ -75,3 +75,7 @@ Afterwards you can savely execute the script
 ```bash
 ./startup.sh
 ```
+
+## Linux Configuration
+
+I also create a Linux config file which can be used when the Desktop is first set up

@@ -1,0 +1,57 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+packages:
+  - git
+  - python3
+  - python3-pip
+  - nodejs
+  - build-essential
+  - openjdk-11-jdk
+  - gcc
+  - curl
+  - zsh
+  - vim
+  - neovim
+  - mysql-workbench
+  - pgadmin4
+  - redis-server
+  - mongodb
+  - htop
+  - ncdu
+  - thefuck
+  - fzf
+  - ripgrep
+  - tmux
+  - virtualbox
+  - vagrant
+  - golang
+  - wget
+
+runcmd:
+  - wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /usr/share/keyrings/packages.microsoft.gpg
+  - sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+  - apt-get update
+  - apt-get install -y code
+  - apt-get install -y docker.io
+  - systemctl start docker
+  - systemctl enable docker
+  - usermod -aG docker $USER
+  - curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - chmod +x /usr/local/bin/docker-compose
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - snap install postman
+  - snap install slack --classic
+  - snap install intellij-idea-community --classic
+  - snap install sublime-text --classic
+  - snap install eclipse --classic
+  - wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O /tmp/anaconda.sh
+  - bash /tmp/anaconda.sh -b -p /home/${USER}/anaconda
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  - pip3 install notebook
+  - wget -O - https://apt.enpass.io/keys/enpass-linux.key | apt-key add -
+  - sh -c 'echo "deb https://apt.enpass.io/ stable main" > /etc/apt/sources.list.d/enpass.list'
+  - apt-get update
+  - apt-get install -y enpass
+  - apt-get autoremove -y
