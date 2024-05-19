@@ -91,6 +91,99 @@ if [ "$OS" == "linux" ]; then
     echo "Installing GCC..."
     sudo apt install -y build-essential
 
+    # Install MySQL Workbench
+    echo "Installing MySQL Workbench..."
+    sudo apt install -y mysql-workbench
+
+    # Install pgAdmin
+    echo "Installing pgAdmin..."
+    sudo apt install -y pgadmin4
+
+    # Install IntelliJ IDEA
+    echo "Installing IntelliJ IDEA..."
+    sudo snap install intellij-idea-community --classic
+
+    # Install Sublime Text
+    echo "Installing Sublime Text..."
+    sudo snap install sublime-text --classic
+
+    # Install Eclipse
+    echo "Installing Eclipse..."
+    sudo snap install eclipse --classic
+
+    # Install Redis
+    echo "Installing Redis..."
+    sudo apt install -y redis-server
+
+    # Install MongoDB
+    echo "Installing MongoDB..."
+    sudo apt install -y mongodb
+
+    # Install Kafka
+    echo "Installing Kafka..."
+    sudo apt install -y kafka
+
+    # Install VirtualBox
+    echo "Installing VirtualBox..."
+    sudo apt install -y virtualbox
+
+    # Install Vagrant
+    echo "Installing Vagrant..."
+    sudo apt install -y vagrant
+
+    # Install Go
+    echo "Installing Go..."
+    sudo apt install -y golang
+
+    # Install Rust
+    echo "Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    # Install Jupyter Notebook
+    echo "Installing Jupyter Notebook..."
+    pip3 install notebook
+
+    # Install Anaconda
+    echo "Installing Anaconda..."
+    wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+    bash Anaconda3-2020.02-Linux-x86_64.sh
+
+    # Install tmux
+    echo "Installing tmux..."
+    sudo apt install -y tmux
+
+    # Install htop
+    echo "Installing htop..."
+    sudo apt install -y htop
+
+    # Install ncdu
+    echo "Installing ncdu..."
+    sudo apt install -y ncdu
+
+    # Install thefuck
+    echo "Installing thefuck..."
+    sudo apt install -y thefuck
+
+    # Install fzf
+    echo "Installing fzf..."
+    sudo apt install -y fzf
+
+    # Install ripgrep
+    echo "Installing ripgrep..."
+    sudo apt install -y ripgrep
+
+    # Install exercism
+    echo "Installing exercism..."
+    sudo apt install -y exercism
+
+    # Install bat
+    echo "Installing bat..."
+    sudo apt install -y bat
+
+    # Install tldr
+    echo "Installing tldr..."
+    sudo apt install -y tldr
+
     # Clean up
     echo "Cleaning up..."
     sudo apt autoremove -y
@@ -185,6 +278,98 @@ elif [ "$OS" == "windows" ]; then
     echo "Installing PuTTY..."
     choco install -y putty
 
+    # Install MySQL Workbench
+    echo "Installing MySQL Workbench..."
+    choco install -y mysql-workbench
+
+    # Install pgAdmin
+    echo "Installing pgAdmin..."
+    choco install -y pgadmin4
+
+    # Install IntelliJ IDEA
+    echo "Installing IntelliJ IDEA..."
+    choco install -y intellijidea-community
+
+    # Install Sublime Text
+    echo "Installing Sublime Text..."
+    choco install -y sublimetext3
+
+    # Install Eclipse
+    echo "Installing Eclipse..."
+    choco install -y eclipse
+
+    # Install Redis
+    echo "Installing Redis..."
+    choco install -y redis-64
+
+    # Install MongoDB
+    echo "Installing MongoDB..."
+    choco install -y mongodb
+
+    # Install Kafka
+    echo "Installing Kafka..."
+    choco install -y kafka
+
+    # Install VirtualBox
+    echo "Installing VirtualBox..."
+    choco install -y virtualbox
+
+    # Install Vagrant
+    echo "Installing Vagrant..."
+    choco install -y vagrant
+
+    # Install Go
+    echo "Installing Go..."
+    choco install -y golang
+
+    # Install Rust
+    echo "Installing Rust..."
+    choco install -y rust
+
+    # Install Jupyter Notebook
+    echo "Installing Jupyter Notebook..."
+    choco install -y jupyter
+
+    # Install Anaconda
+    echo "Installing Anaconda..."
+    choco install -y anaconda
+
+    # Install tmux
+    echo "Installing tmux..."
+    choco install -y tmux
+
+    # Install htop
+    echo "Installing htop..."
+    choco install -y htop
+
+    # Install ncdu
+    echo "Installing ncdu..."
+    choco install -y ncdu
+
+    # Install thefuck
+    echo "Installing thefuck..."
+    choco install -y thefuck
+
+    # Install fzf
+    echo "Installing fzf..."
+    choco install -y fzf
+
+    # Install ripgrep
+    echo "Installing ripgrep..."
+    choco install -y ripgrep
+
+    # Install exercism
+    echo "Installing exercism..."
+    choco install -y exercism
+
+    # Install bat
+    echo "Installing bat..."
+    choco install -y bat
+
+    # Install tldr
+    echo "Installing tldr..."
+    choco install -y tldr
+
     echo "Installation of necessary programs completed for Windows!"
 
 elif [ "$OS" == "macos" ]; then
@@ -264,6 +449,99 @@ elif [ "$OS" == "macos" ]; then
     # Install GCC
     echo "Installing GCC..."
     brew install gcc
+
+    # Install MySQL Workbench
+    echo "Installing MySQL Workbench..."
+    brew install --cask mysqlworkbench
+
+    # Install pgAdmin
+    echo "Installing pgAdmin..."
+    brew install --cask pgadmin4
+
+    # Install IntelliJ IDEA
+    echo "Installing IntelliJ IDEA..."
+    brew install --cask intellij-idea-ce
+
+    # Install Sublime Text
+    echo "Installing Sublime Text..."
+    brew install --cask sublime-text
+
+    # Install Eclipse
+    echo "Installing Eclipse..."
+    brew install --cask eclipse-java
+
+    # Install Redis
+    echo "Installing Redis..."
+    brew install redis
+
+    # Install MongoDB
+    echo "Installing MongoDB..."
+    brew tap mongodb/brew
+    brew install mongodb-community
+
+    # Install Kafka
+    echo "Installing Kafka..."
+    brew install kafka
+
+    # Install VirtualBox
+    echo "Installing VirtualBox..."
+    brew install --cask virtualbox
+
+    # Install Vagrant
+    echo "Installing Vagrant..."
+    brew install --cask vagrant
+
+    # Install Go
+    echo "Installing Go..."
+    brew install go
+
+    # Install Rust
+    echo "Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    # Install Jupyter Notebook
+    echo "Installing Jupyter Notebook..."
+    pip3 install notebook
+
+    # Install Anaconda
+    echo "Installing Anaconda..."
+    brew install --cask anaconda
+
+    # Install tmux
+    echo "Installing tmux..."
+    brew install tmux
+
+    # Install htop
+    echo "Installing htop..."
+    brew install htop
+
+    # Install ncdu
+    echo "Installing ncdu..."
+    brew install ncdu
+
+    # Install thefuck
+    echo "Installing thefuck..."
+    brew install thefuck
+
+    # Install fzf
+    echo "Installing fzf..."
+    brew install fzf
+
+    # Install ripgrep
+    echo "Installing ripgrep..."
+    brew install ripgrep
+
+    # Install exercism
+    echo "Installing exercism..."
+    brew install exercism
+
+    # Install bat
+    echo "Installing bat..."
+    brew install bat
+
+    # Install tldr
+    echo "Installing tldr..."
+    brew install tldr
 
     echo "Installation of necessary programs completed for macOS!"
 
