@@ -21,6 +21,8 @@ This script will install the following programs:
 - Vim
 - Neovim
 - Java JDK
+- Enpass
+- GCC
 
 ## Installation
 

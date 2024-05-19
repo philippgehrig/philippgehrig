@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set this variable to "linux", "windows", or "macos"
-OS="macos"
+OS="linux"
 
 if [ "$OS" == "linux" ]; then
     # Linux installation commands
@@ -79,6 +79,17 @@ if [ "$OS" == "linux" ]; then
     # Install Java JDK
     echo "Installing Java JDK..."
     sudo apt install -y default-jdk
+
+    # Install Enpass
+    echo "Installing Enpass..."
+    wget -O - https://apt.enpass.io/keys/enpass-linux.key | sudo apt-key add -
+    echo "deb https://apt.enpass.io/ stable main" | sudo tee /etc/apt/sources.list.d/enpass.list
+    sudo apt update
+    sudo apt install -y enpass
+
+    # Install GCC
+    echo "Installing GCC..."
+    sudo apt install -y build-essential
 
     # Clean up
     echo "Cleaning up..."
@@ -158,6 +169,14 @@ elif [ "$OS" == "windows" ]; then
     echo "Installing Java JDK..."
     choco install -y openjdk
 
+    # Install Enpass
+    echo "Installing Enpass..."
+    choco install -y enpass
+
+    # Install GCC (mingw)
+    echo "Installing GCC (mingw)..."
+    choco install -y mingw
+
     echo "Installation of necessary programs completed for Windows!"
 
 elif [ "$OS" == "macos" ]; then
@@ -229,6 +248,14 @@ elif [ "$OS" == "macos" ]; then
     # Install Java JDK
     echo "Installing Java JDK..."
     brew install openjdk
+
+    # Install Enpass
+    echo "Installing Enpass..."
+    brew install --cask enpass
+
+    # Install GCC
+    echo "Installing GCC..."
+    brew install gcc
 
     echo "Installation of necessary programs completed for macOS!"
 
