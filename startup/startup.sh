@@ -177,6 +177,14 @@ elif [ "$OS" == "windows" ]; then
     echo "Installing GCC (mingw)..."
     choco install -y mingw
 
+    # Install WinSCP
+    echo "Installing WinSCP..."
+    choco install -y winscp
+
+    # Install PuTTY
+    echo "Installing PuTTY..."
+    choco install -y putty
+
     echo "Installation of necessary programs completed for Windows!"
 
 elif [ "$OS" == "macos" ]; then
