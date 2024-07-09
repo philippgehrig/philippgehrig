@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working at [Mercedes Benz in Sindelfingen](https://mercedes-benz.com)
 
-- 🏎️ I'm a member of my universities Formula Student Team [DHBW Engineering](https://dhbw-enginnering.de)
+- 🏎️ I'm a member of my universities Formula Student Team [DHBW Engineering](https://dhbw-engineering.de)
 
 - 🤝 I’m currently studying Computer Science [DHBW Stuttgart](https://dhbw-stuttgart.de)
 
