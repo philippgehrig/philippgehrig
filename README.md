@@ -1,15 +1,16 @@
-<h1 align="center">Hi 👋, I'm Philipp</h1>
-<h3 align="center">a Software Developer studying at DHBW Stuttgart specialising in IT-Automotive</h3>
+# Hi there, I'm Philipp! 👋
 
+I'm a passionate Software Developer specializing in IT-Automotive, currently pursuing my studies at [DHBW Stuttgart](https://www.dhbw-stuttgart.de/). My journey blends academic learning with hands-on industry experience.
 
+- 🚗 **Corporate Student at [Mercedes-Benz, Sindelfingen](https://www.mercedes-benz.com/)**  
+  Immersed in cutting-edge automotive projects, contributing to the future of mobility.
 
-- 🔭 I’m currently working at [Mercedes Benz in Sindelfingen](https://mercedes-benz.com) as a Coorporate Student
+- 🏎️ **Team Leader at [DHBW Engineering's Formula Student Team](https://www.dhbw-engineering.de/)**  
+  Leading the development of CFD simulations, pushing the boundaries of automotive engineering.
 
-- 🏎️ I'm a team leader of my universities Formula Student Team developing CFD Simulations at [DHBW Engineering](https://dhbw-engineering.de)
+- 🎓 **Computer Science Enthusiast**  
+  Focusing on IT-Automotive, merging software prowess with automotive innovations.
 
-- 🤝 I’m currently studying Computer Science at [DHBW Stuttgart](https://dhbw-stuttgart.de) focusing on IT-Automotive
+Feel free to reach out: philipp@gehrig.info
 
-- 📫 You can reach me here: **philipp@gehrig.info**
-
-
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=philippgehrig&label=Profile%20views&color=0e75b6&style=flat-square" alt="philippgehrig" /> </p>
+Let's connect and drive innovation together!
