@@ -1,0 +1,3 @@
+# Proprietary installers are dropped into installers/ locally and never committed.
+installers/*
+!installers/README.md

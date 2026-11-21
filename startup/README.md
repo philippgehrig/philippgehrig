@@ -1,81 +1,52 @@
-# Startup
+# Startup: debian-tower
 
-This folder contains the startup skript to install all programms i need when resetting a computer!
+Rebuilds this workstation on a fresh **Debian 13 (trixie)** install. Idempotent, modular.
 
-## Programs
+## Hardware this targets
 
-This script will install the following programs:
+| Part | Detail | Handled in |
+| --- | --- | --- |
+| GPU | NVIDIA RTX 3060 Ti (GA104), proprietary driver 550 (DKMS) | `20-nvidia` |
+| iGPU / audio | Intel Alder Lake-S, SOF firmware | `10-system` |
+| NIC | Realtek RTL8125 2.5GbE (`r8169`) | `10-system` |
+| CPU | Intel, microcode | `10-system` |
 
-- Visual Studio Code
-- Git
-- Python3
-- Node.js
-- Docker
-- Docker Compose
-- curl
-- wget
-- Zsh
-- Oh My Zsh
-- Postman
-- Slack
-- Vim
-- Neovim
-- Java JDK
-- Enpass
-- GCC
-- MySQL Workbench
-- pgAdmin
-- IntelliJ IDEA
-- Sublime Text
-- Eclipse
-- Redis
-- MongoDB
-- Kafka
-- VirtualBox
-- Vagrant
-- Go
-- Rust
-- Jupyter Notebook
-- Anaconda
-- tmux
-- htop
-- ncdu
-- thefuck
-- fzf
-- ripgrep
-- exercism
-- bat
-- tldr
-
-### Linux specific Programs
-
-### Windows specific Programs
-
-- PuTTy
-- WinSCP
-
-### MacOS specific Programs
-
-## Installation
-
-First you need to make the script executable using:
-
-```
-chmod +x startup.sh
-```
-
-Then you need to specify in the bash script which OS you are running on:
-
-```
-OS="linux"
-```
-
-Afterwards you can savely execute the script
+## Usage
 
 ```bash
-./startup.sh
+cd startup
+./install.sh              # everything, in order
+./install.sh 20-nvidia    # single module
+./install.sh --list
 ```
 
-## Linux Configuration
+Run as your normal user; sudo is used where required. Reboot afterwards.
 
-I also create a Linux config file which can be used when the Desktop is first set up
+## Modules
+
+| Module | Contents |
+| --- | --- |
+| `00-apt` | Debian sources (contrib, non-free, non-free-firmware, backports); Docker, Chrome, Enpass, DMS and dux repos |
+| `10-system` | Firmware, microcode, NetworkManager/OpenVPN, SSH, CUPS, PipeWire, Bluetooth, CLI tooling |
+| `20-nvidia` | Driver, CUDA lib, Vulkan, i386 libs, modprobe options (modeset, VRAM preservation), suspend services |
+| `30-desktop` | GDM3, GNOME, niri + DMS + quickshell, Ghostty, fonts, LibreOffice, Evolution, codecs |
+| `40-dev` | Toolchains (gcc, Java, Go, Node, Python, Rust), Docker, VS Code, Claude Code, opencode, process-compose |
+| `50-apps` | Chrome, Firefox, Enpass, Steam, Discord |
+| `60-cfd` | Single-node Slurm with 1 GPU, munge, Xvfb, STAR-CCM+ check |
+| `70-user` | PATH, git credential helpers, clones `cfd-toolchain`, `cv`, this repo |
+| `80-starccm` | **Manual only**: runs the STAR-CCM+ installer from `installers/` (see below) |
+
+## STAR-CCM+ (manual, after you have your passwords)
+
+1. Copy the Siemens download (`STAR-CCM+*_linux-x86_64.tar.gz`) into `startup/installers/`
+   (git-ignored), or point `STARCCM_INSTALLER_DIR` at another folder, e.g. a USB stick.
+2. Run `./install.sh starccm`. It extracts the archive, runs the interactive installer
+   into `/opt/Siemens`, and cleans up. It is skipped by the default `./install.sh` run.
+   Needs ~2x the archive size free in `~/.cache` (override with `STARCCM_EXTRACT_DIR`).
+
+## Not automated
+
+- Logins: `gh auth login`, `glab auth login`, Enpass, Discord, Steam, Claude
+- Personal niri / DMS config (`~/.config/niri`, DMS settings)
+- Secure Boot: enroll the DKMS MOK on first boot if enabled
+- Git identity (`user.name`, `user.email`)
